@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mirror Bridges Between Probability Measures</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; padding: 0;
+      font-family: 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-weight: 300; font-size: 16px; line-height: 1.6;
+      color: #000; background: #fff;
+    }
+    a { color: #0000EE; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    img { display: block; max-width: 100%; }
+
+    .return-main {
+      position: fixed; right: 20px; bottom: 20px;
+      padding: 8px 16px; background-color: #750014; color: #fff;
+      text-decoration: none; font-weight: 300; border-radius: 999px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      transition: background-color 0.2s ease-in-out;
+      z-index: 1000;
+    }
+    .return-main:hover { 
+        background-color: rgba(117, 0, 20, 0.8);       
+        text-decoration: none;}
+
+    .container { max-width: 900px; margin: 0 auto; padding: 20px 20px 60px; }
+    h2, h3 { font-family: 'Helvetica Neue Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    h2 { font-weight: 700; font-size: 28px; margin: 0 0 16px; }
+    h3 { font-weight: 700; font-size: 20px; margin: 24px 0 12px; }
+    .authors {
+      margin-bottom: 24px;
+      font-family: 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 18px; color: #333; line-height: 1.4;
+    }
+    figure { margin: 24px 0; }
+    figcaption { margin-top: 8px; font-size: 14px; color: #555; font-style: italic; }
+    ul { margin: 0 0 24px 20px; }
+
+    .code-container { position: relative; margin-bottom: 24px; font-size: 12px;}
+    pre {
+      background: #f7f7f7; padding: 12px; border-radius: 6px;
+      white-space: pre-wrap; word-wrap: break-word;
+      overflow-x: auto; margin: 0;
+    }
+    .copy-btn {
+      position: absolute; bottom: 8px; right: 8px;
+      background-color: #eee; color: rgba(139, 149, 158, 0.8);
+      border: none; padding: 4px 12px;
+      border-radius: 999px;
+      font-family: 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 14px; font-weight: 500;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+  <a href="../index.html" class="return-main">RETURN TO MAIN</a>
+
+  <section id="project" class="container">
+    <h2>
+      Mirror Bridges Between Probability Measures
+      <em>Under Review</em>
+    </h2>
+    <div class="authors">
+      <p>
+        LETICIA MATTOS DA SILVA<sup>1</sup>,
+        SILVIA SELLÁN<sup>1,2</sup>,
+        FRANCISCO VARGAS<sup>3,4</sup>,
+        JUSTIN SOLOMON<sup>1</sup>
+      </p>
+      <p>
+        <sup>1</sup>Massachusetts Institute of Technology, USA;
+        <sup>2</sup>Columbia University, USA;
+        <sup>3</sup>Cambridge University, UK;
+        <sup>4</sup>Xaira Therapeutics, UK
+      </p>
+    </div>
+
+    <figure>
+      <img
+        src="../figures/registration-scurve.png"
+        alt="teaser"
+      />
+      <figcaption>
+        Our method allows resampling with control over in-distribution variation, illustrated by varying levels of noise.
+      </figcaption>
+    </figure>
+
+    <h3>Abstract</h3>
+    <p>
+     Resampling from a target measure whose density is unknown is a fundamental problem in mathematical statistics and 
+     machine learning. A setting that dominates the machine learning literature consists of learning a map from an 
+     easy-to-sample prior, such as the Gaussian distribution, to a target measure. Under this model, samples from the 
+     prior are pushed forward to generate a new sample on the target measure, which is often difficult to sample from 
+     directly. Of particular interest is the problem of generating a new sample that is proximate to or otherwise 
+     conditioned on a given input sample. In this paper, we propose a new model called mirror bridges to solve this 
+     problem of conditional resampling. Our key observation is that solving the Schrödinger bridge problem between a 
+     distribution and itself provides a natural way to produce new samples from conditional distributions, giving 
+     in-distribution variations of an input data point. We demonstrate how to efficiently estimate the solution to this 
+     largely overlooked version of the Schrödinger bridge problem, and we prove that under mild conditions, the difference 
+     between our estimate and the true Schrödinger bridge can be controlled explicitly. We show that our proposed method 
+     leads to significant algorithmic simplifications over existing alternatives, in addition to providing control over 
+     in-distribution variation. Empirically, we demonstrate how these benefits can be leveraged to produce proximal samples
+      in a number of application domains.
+    </p>
+
+    <h3>Downloads</h3>
+    <ul>
+      <li><a href="../papers/mirror-bridges-between-probability-measures.pdf">Preprint</a></li>
+      <li><a href="https://arxiv.org/abs/2410.07003" target="_blank" rel="noopener">arXiv</a></li>
+    </ul>
+
+    <div class="code-container">
+      <h3>BibTeX</h3>
+      <button class="copy-btn" data-target="bibtex-code">COPY</button>
+      <pre id="bibtex-code">@misc{dasilva2025mirrorbridgesprobabilitymeasures,
+  title={Mirror Bridges Between Probability Measures}, 
+  author={Leticia Mattos Da Silva and Silvia Sellán and Francisco Vargas and Justin Solomon},
+  year={2025},
+  eprint={2410.07003},
+  archivePrefix={arXiv},
+  primaryClass={cs.LG},
+  url={https://arxiv.org/abs/2410.07003}
+}</pre>
+    </div>
+
+    <h3>Acknowledgements</h3>
+    <p>
+      Leticia Mattos Da Silva acknowledges the generous support of a MathWorks Engineering Fellowship. 
+      The MIT Geometric Data Processing Group acknowledges the generous support of ARO (W911NF2010168, 
+      W911NF2110293), NSF (IIS-2335492), the CSAIL Future of Data program, MIT–IBM Watson AI Lab, Wistron 
+      Corporation, and the Toyota–CSAIL Joint Research Center.
+    </p>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.copy-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const code = document.getElementById(btn.getAttribute('data-target')).innerText;
+          navigator.clipboard.writeText(code).then(() => {
+            btn.textContent = 'COPIED!';
+            setTimeout(() => btn.textContent = 'COPY', 2000);
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>
