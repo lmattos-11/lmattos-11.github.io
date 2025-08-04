@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="project.css" />
+  <title>A Framework for Solving Parabolic Partial Differential Equations on Discrete Domains</title>
+
+  
+</head>
+<body>
+
+  <section id="project" class="container">
+    <h2>
+      A Framework for Solving Parabolic Partial Differential Equations on Discrete Domains
+      <em><span class="conference">ACM Transactions on Graphics<span></em>
+    </h2>
+    <div class="authors">
+      <p>
+        LETICIA MATTOS DA SILVA<sup>1</sup>,
+        ODED STEIN<sup>2</sup>,
+        JUSTIN SOLOMON<sup>1</sup>
+      </p>
+      <p><span style="font-size: small;">
+        <sup>1</sup>Massachusetts Institute of Technology, USA;
+        <sup>2</sup>University of Southern California, USA
+        <span>
+      </p>
+    </div>
+    <figure>
+      <img
+        src="../figures/teaser-parabolic-pde.png"
+        alt="teaser"
+      />
+      <figcaption>
+        We show the time evolution of the Fokker-Planck equation under a certain flow on the discrete sphere with
+         81,920 triangle faces and 40,962 vertices, obtained using our framework. Our method can be used for any 
+         equation in a class of second-order parabolic PDE on triangle mesh surfaces.
+      </figcaption>
+    </figure>
+
+    <h3>Abstract</h3>
+    <p>
+      We introduce a framework for solving a class of parabolic partial differential equations on triangle mesh 
+      surfaces, including the Hamilton-Jacobi equation and the Fokker-Planck equation. PDE in this class often have 
+      nonlinear or stiff terms that cannot be resolved with standard methods on curved triangle meshes. To address 
+      this challenge, we leverage a splitting integrator combined with a convex optimization step to solve these PDE. 
+      Our machinery can be used to compute entropic approximation of optimal transport distances on geometric domains, 
+      overcoming the numerical limitations of the state-of-the-art method. In addition, we demonstrate the versatility 
+      of our method on a number of linear and nonlinear PDE that appear in diffusion and front propagation tasks in 
+      geometry processing.
+    </p>
+
+    <h3>Links</h3>
+    <p><i class="fa-regular fa-file-lines"></i> <a href="../papers/parabolic-pde.pdf">Paper</a></p>
+    <p><i class="fa-brands fa-github"></i> <span style="color: #777;">Code is coming soon!</span></p>
+    <p>
+      <a
+        href="https://dl.acm.org/doi/10.1145/3666087"
+        style="display:inline-flex; align-items:center; white-space:nowrap;"
+      >
+        <img
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAAAAABXZoBIAAAA2UlEQVR4AcTQIQzCMBCF4ZNTCDQ+SDwaicd7gZ5D4uYma5qQS85UN6iaOdRc5Qx2qu7REiAHI0Hym4ovueSV/p739LUmhcoBjuqwnOAFLMiJ4DDBds24Z/nyLou6awSPTk0bjcIz5IRXskJSWIvFEOMApJiVpdN3BdjSkgx6QtG5MoeMAQOhn6Hk1HYU9Li+EP4nqrMuhYxVGkd9NsfALj8RPeXA2ryeCVh3VDhio9QK9M62N0f7NG66ekFvBTGPr10b+mwPx8VYECc4C4eyyFV+NLfhTCYDDQAIp+CjK3j3KQAAAABJRU5ErkJggg=="
+          alt="ACM DL"
+          style="  
+            display:inline-block;
+            width:1em;
+            height:1em;
+            margin-right:0.5em;
+            border-radius:50%;
+            object-fit:cover;
+          "
+        />
+        ACM Digital Library
+      </a>
+    </p>
+        <p>
+      <a
+        href="https://arxiv.org/abs/2312.00327"
+        style="display:inline-flex; align-items:center; white-space:nowrap;"
+      >
+        <img
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAbFBMVEVHcEyzICWzICWzICWzFhqzICWzICWzICWzrKWzICWzGx+zrKWzrKWzq6SzICWzrKWzHiOzrKWzICWzHiSzrKWzFRyzkYyzsaqzkIuzrKWzt6+zCBOzrKWzX12zrKWzODqzTk6zICWzrqazICWbpK3bAAAAJHRSTlMAFPO9Pv/foAnpBTj/6PlSHntLhaj+yf/3sBf/wf7U/8pf9ip5w8r+AAAAxklEQVR4AXXSVQKDQAxF0YcEDfXizv732An1IdzfA+MwOa6H3XyiYF9DS6M/DYjiBO9Szn4xORC5bz3yP+JERAcH0pmZI/x1IZOoWAqrq+gJN2NHbPIM3vOC+QylQLQsKmgl9/VfqNVlI3pRjYtVSdOWuehWVbBn0buOKUvDna7QtBAV0xoFM93C+yB602wiug8zq8e3kMmvWbuURGwBIvm3Vk79BBjNmOfNE3MdPDPaWz/+PLDeWrJztU7yjN1aWfJut3XFD+5yC5QmehAsAAAAAElFTkSuQmCC"
+          alt="arXiv"
+          style="  
+            display:inline-block;
+            width:1em;
+            height:1em;
+            margin-right:0.5em;
+            border-radius:50%;
+            object-fit:cover;
+          "
+        />
+        arXiv
+      </a>
+    </p>
+
+    <h3>Presentation Video</h3>
+    <iframe
+      width="560" 
+      height="315"
+      src="https://www.youtube.com/embed/0F3gX5razSA?rel=0"
+      title="Presentation Video"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+
+    <div class="code-container">
+      <h3>BibTeX</h3>
+      <button class="copy-btn" data-target="bibtex-code">
+        <i class="fa-regular fa-copy"></i>
+      </button>
+      <pre id="bibtex-code">@article{10.1145/3666087,
+          author = {Mattos Da Silva, Leticia and Stein, Oded and Solomon, Justin},
+          title = {A Framework for Solving Parabolic Partial Differential Equations on Discrete Domains},
+          year = {2024},
+          issue_date = {October 2024},
+          publisher = {Association for Computing Machinery},
+          address = {New York, NY, USA},
+          volume = {43},
+          number = {5},
+          issn = {0730-0301},
+          url = {https://doi.org/10.1145/3666087},
+          doi = {10.1145/3666087},
+          journal = {ACM Trans. Graph.},
+          month = jun,
+          articleno = {156},
+          numpages = {14}
+      }</pre>
+    </div>
+
+    <h3>Acknowledgements</h3>
+    <p>
+      Leticia Mattos Da Silva acknowledges the generous support of the Schwarzman College of Computing Fellowship 
+      funded by Google Inc. and the MathWorks Fellowship. Oded Stein was supported by the Swiss National Science 
+      Foundation’s Early Postdoc.Mobility Fellowship. Justin Solomon acknowledges the generous support of Army 
+      Research Office grants W911NF2010168 and W911NF2110293, of Air Force Office of Scientific Research award 
+      FA9550-19-1-031, of National Science Foundation grant CHS-1955697, from the CSAIL Systems that Learn program, 
+      from the MIT–IBM Watson AI Laboratory, from the Toyota–CSAIL Joint Research Center, from a gift from Adobe 
+      Systems, and from a Google Research Scholar award.
+    </p>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.copy-btn').forEach(btn => {
+        // grab the <i> inside the button
+        const icon = btn.querySelector('i');
+
+        btn.addEventListener('click', () => {
+          const code = document
+            .getElementById(btn.getAttribute('data-target'))
+            .innerText;
+
+          navigator.clipboard.writeText(code).then(() => {
+            // outline → solid
+            icon.classList.replace('fa-regular', 'fa-solid');
+            // after 2s, revert solid → outline
+            setTimeout(() => {
+              icon.classList.replace('fa-solid', 'fa-regular');
+            }, 2000);
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>

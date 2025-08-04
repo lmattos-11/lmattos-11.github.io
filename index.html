@@ -1,274 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta charset="UTF-8" />
   <meta
     name="viewport"
     content="width=device-width, initial-scale=1.0"
   />
-  <title>Leticia Mattos Da Silva | Ph.D. Candidate in Computer Science</title>
+  <title>Leticia Mattos Da Silva | Ph.D. Student in Computer Science</title>
 
-  <style>
-    /* Reset & box-sizing */
-    *, *::before, *::after {
-      box-sizing: border-box;
-    }
-    html {
-      scroll-behavior: smooth;
-    }
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      font-weight: 300;
-      font-size: 16px;
-      line-height: 1.6;
-      color: #000;
-      background: #fff;
-    }
-    a {
-      color: #0000EE;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    img {
-      display: block;
-      max-width: 100%;
-    }
-
-    /* Haader and navigation bar */
-    header {
-      position: sticky;
-      top: 0;
-      background: #fff;
-      border-bottom: 5px solid #750014;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
-      z-index: 1000;
-    }
-    .header-inner {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 20px 0;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-    }
-    .site-title {
-      margin: 0;
-      font-family: 'Helvetica Neue Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      font-weight: 700;
-      font-size: 28px;
-      line-height: 1.1;
-      white-space: nowrap;
-    }
-    .site-subtitle {
-      margin: 4px 0 0 0;
-      font-family: 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      font-weight: 300;
-      font-size: 16px;
-      color: #555;
-      white-space: nowrap;
-    }
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-    }
-    nav li {
-      margin-left: 8px;
-    }
-    nav a {
-      display: inline-block;
-      font-family: 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      font-weight: 300;
-      font-size: 16px;
-      color: #000;
-      padding: 6px 10px;
-      border-radius: 999px;
-      transition: background 0.2s ease-in-out;
-      white-space: nowrap;
-      text-decoration: none;
-    }
-    nav a:hover {
-      background-color: rgba(139, 149, 158, 0.2);
-      text-decoration: none;
-    }
-    nav a.active {
-      background-color: rgba(139, 149, 158, 0.2);
-      text-decoration: none;
-    }
-
-    /* Main containers and typography */
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 20px 20px 60px 20px;
-    }
-    h2 {
-      font-family: 'Helvetica Neue Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      font-weight: 700;
-      font-size: 28px;
-      margin: 0 0 16px 0;
-    }
-    h3 {
-      font-family: 'Helvetica Neue Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      font-weight: 700;
-      font-size: 20px;
-      margin: 24px 0 12px 0;
-    }
-    hr {
-      max-width: 900px;
-      width: 100%;
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 20px;   
-      margin-bottom: 20px;
-      border: none;
-      border-top: 1px solid #C7C7C7;
-    }
-
-    /* About me */
-    .about-section {
-      display: flex;
-      gap: 40px;
-      margin-top: 20px;
-      flex-wrap: wrap;
-    }
-    .about-left {
-      flex: 1 1 200px;
-      max-width: 240px;
-      text-align: center;
-    }
-    .profile-image {
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin: 0 auto;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
-    .contact {
-      margin-top: 10px;
-      font-family: 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      font-weight: 300;
-      font-size: 18px;
-      color: #333;
-    }
-    .about-right {
-      flex: 2 1 400px;
-    }
-    .about-right p {
-      margin-bottom: 16px;
-    }
-    .note {
-      font-size: 14px;
-      margin-top: 30px;
-      font-style: italic;
-      color: #333;
-    }
-
-    /* Research Interests */
-    .research p {
-      margin-bottom: 16px;
-    }
-    .research strong {
-      font-weight: 700;
-    }
-
-    /* Publications */
-    .publication-group {
-      margin-top: 20px;
-    }
-    .publication-entry {
-      display: flex;
-      align-items: flex-start;
-      gap: 20px;
-      margin-bottom: 24px;
-      flex-wrap: nowrap;
-    }
-    .publication-entry img {
-      flex-shrink: 0;
-      width: 240px;
-      height: 140px;
-      object-fit: cover;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
-    .publication-details h4 {
-      font-family: 'Helvetica Neue Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      font-weight: 700;
-      font-size: 18px;
-      margin: 0 0 6px 0;
-    }
-    .publication-details p {
-      margin: 0;
-      font-family: 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      font-weight: 300;
-      font-size: 15px;
-      line-height: 1.4;
-    }
-    .publication-details p a {
-      margin-right: 12px;
-      font-size: 15px;
-    }
-
-    /* In the press */
-    .press-entry {
-      display: flex;
-      align-items: flex-start;
-      gap: 20px;
-      margin-bottom: 24px;
-      flex-wrap: nowrap;
-    }
-    .press-entry img {
-      flex-shrink: 0;
-      width: 240px;
-      height: 140px;
-      object-fit: cover;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
-    .press-details a.headline {
-      font-family: 'Helvetica Neue Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      font-weight: 700;
-      font-size: 18px;
-      line-height: 1.2;
-      margin-bottom: 6px;
-      display: inline-block;
-    }
-    .press-details p {
-      margin: 4px 0;
-      font-family: 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      font-size: 14px;
-      color: #333;
-      line-height: 1.4;
-    }
-    .press-details a.secondary {
-      font-size: 14px;
-      margin-top: 4px;
-      display: inline-block;
-    }
-
-    /* UROP INFORMATION */
-    .urop-section p {
-      margin-bottom: 16px;
-    }
-    .urop-section h3 {
-      font-size: 20px;
-      margin: 24px 0 12px 0;
-    }
-    .urop-section a {
-      color: #0000EE;
-      text-decoration: none;
-    }
-    .urop-section a:hover {
-      text-decoration: underline;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -277,10 +22,11 @@
     <div class="header-inner">
       <div>
         <h1 class="site-title">Leticia Mattos Da Silva</h1>
-        <p class="site-subtitle">Ph.D. Candidate in Computer Science</p>
+        <p class="site-subtitle">Ph.D. Student in Computer Science</p>
       </div>
 
       <nav>
+        <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
         <ul>
           <li><a href="docs/cv.pdf" target="_blank" rel="noopener">CV</a></li>
           <li><a href="#about">About Me</a></li>
@@ -309,43 +55,39 @@
       <div class="about-right">
         <h2>About me</h2>
         <p>
-          I’m a Ph.D. candidate at MIT, where I research numerical algorithms
-          for nonlinear PDE and other associated dynamical problems, under the
-          supervision of Justin Solomon. The goal of my work is to advance
-          applications of these PDE in the fields of geometry processing and
-          computer graphics.
+          I’m a Ph.D. student at MIT, where I work under the supervision of 
+          Justin Solomon. <em>My research seeks to empower people with reliable 
+          and effective ways to solve geometry processing problems.</em>
         </p>
         <p>
-          My research is supported by a 2024 MathWorks Engineering Fellowship.
-          In the past, I had the generous support of a 2023 MathWorks EECS
-          Fellowship, a 2022 Schwarzman College of Computing Fellowship funded
-          by Google and a 2021 MIT Distinguished Fellowship in EECS.
+          I am the recipient of two MathWorks Fellowships, a Google Fellowship and 
+          a MIT Distinguished Fellowship. Before coming to MIT, I graduated 
+          <em>cum laude</em> with a bachelor’s degree in mathematics at the 
+          University of California, Los Angeles.
         </p>
         <p>
-          Before coming to MIT, I graduated <em>cum laude</em> with a
-          bachelor’s degree in mathematics at the University of California, Los
-          Angeles.
+          In my spare time, I enjoy watching telenovelas <a href="https://en.wikipedia.org/wiki/Para%C3%ADso_Tropical" style="color: #c7c7c7; font-size: 15px;">(what
+           am I watching now?)</a> and pretending to be a great chef in my home kitchen.
         </p>
       </div>
     </div>
   </section>
 
-  <hr />
+  <hr/>
 
   <section id="research" class="container research">
     <h2>Research Interests</h2>
     <p>
-      My research is focused on <strong>numerical methods for PDE</strong>, in
-      particular nonlinear parabolic PDE and certain kinetic equations. I am
-      also interested in <strong>algorithms to solve dynamical problems</strong>
-      involving the stochastic counterparts to these nonlinear PDE, e.g.,
-      algorithms for the Schrö​dinger Bridge Problem. I'm mainly concerned
-      with applications in <strong>geometry processing, computer graphics, and
-      vision</strong>.
+      I'm interested in understanding problems in geometry processing through the lens of
+      partial differential equations (PDE). My goal is to make PDE-based methods 
+      robust and flexible enough that users can apply them with confidence and reliability, 
+      without being constrained by technical barriers. By bridging mathematical theory and 
+      the goal of usability, I aim to open new avenues for animation, design, and simulation, 
+      where advanced PDE techniques become natural extensions of a user’s creative process.
     </p>
   </section>
 
-  <hr />
+  <hr/>
 
   <section id="publications" class="container">
     <h2>Publications</h2>
@@ -363,10 +105,10 @@
           <p>
             <strong>Leticia Mattos Da Silva</strong>, Silvia Sellán, Natalia Pacheco‐Tallaj,
             Justin Solomon<br />
-            ACM SIGGRAPH Conference Proceedings<br />
-            <a href="papers/variational-elastodynamic-simulation.pdf">PDF</a>
-            |
-            <span style="color: #777;">Code (coming soon)</span>
+            ACM SIGGRAPH 2025<br />
+            <i class="fa-solid fa-magnifying-glass"></i> <a href="projects/variational-elastodynamic-simulation.html">Project Page</a>
+            <i class="fa-regular fa-file-lines"></i> <a href="papers/variational-elastodynamic-simulation.pdf">Paper</a>
+            <i class="fa-brands fa-github"></i> <span style="color: #777;">Code is coming soon!</span>
           </p>
         </div>
       </div>
@@ -381,7 +123,8 @@
             <strong>Leticia Mattos Da Silva</strong>, Silvia Sellán, Francisco Vargas,
             Justin Solomon<br />
             Under Peer Review<br />
-            <a href="papers/mirror-bridges-between-probability-measures.pdf">PDF</a>
+            <i class="fa-solid fa-magnifying-glass"></i> <a href="projects/mirror-bridges.html">Project Page</a>
+            <i class="fa-regular fa-file-lines"></i> <a href="papers/mirror-bridges-between-probability-measures.pdf">Paper</a>
           </p>
         </div>
       </div>
@@ -403,7 +146,8 @@
           <p>
             <strong>Leticia Mattos Da Silva</strong>, Oded Stein, Justin Solomon<br />
             ACM Transactions on Graphics (presented at SIGGRAPH 2024)<br />
-            <a href="papers/parabolic-pde.pdf">PDF</a>
+            <i class="fa-solid fa-magnifying-glass"></i> <a href="projects/parabolic-pde.html">Project Page</a>
+            <i class="fa-regular fa-file-lines"></i> <a href="papers/parabolic-pde.pdf">Paper</a>
           </p>
         </div>
       </div>
@@ -422,8 +166,32 @@
           <p>
             Silvia Sellán, Jack Luong, <strong>Leticia Mattos Da Silva</strong>, Aravind Ramakrishnan, Yuchuan Yang, Alec Jacobson<br />
             ACM Transactions on Graphics<br />
-            <a href="papers/breaking-good.pdf">PDF</a> |
-            <a href="https://github.com/sgsellan/fracture-modes/tree/main">Code</a>
+            <i class="fa-solid fa-magnifying-glass"></i> <a href="https://www.dgp.toronto.edu/projects/breaking-good/">Project Page</a>
+            <i class="fa-regular fa-file-lines"></i> <a href="papers/breaking-good.pdf">Paper</a>
+            <i class="fa-brands fa-github"></i> <a href="https://github.com/sgsellan/fracture-modes/tree/main">Code</a>
+          </p>
+        </div>
+      </div> 
+  </section>
+
+  <hr />
+
+  <!-- Courses -->
+  <section id="publications" class="container">
+    <h2>Courses</h2>
+      <div class="publication-entry">
+        <img
+          src="figures/sgp-2025-tutorial.png"
+          alt="SGP 2025 Tutorial"
+        />
+        <div class="publication-details">
+          <h4>Convex Relaxation Strategies for Graphics and Geometry Processing</h4>
+          <p>
+            <strong>Leticia Mattos Da Silva</strong><br />
+            Eurographics Symposium on Geometry Processing (SGP)<br />
+            <i class="fa-solid fa-magnifying-glass"></i> <a href="https://school.geometryprocessing.org/summerschool-2025/index.html#course2">Course Page</a>
+            <i class="fa-regular fa-file-lines"></i> <a href="courses/sgp-convex-relaxation-strategies-tutorial-2025.pdf">Slides</a>
+            <i class="fa-brands fa-youtube"></i> <a href="https://youtu.be/vNTWv4J92Iw?si=QYg0OSgj_3G0H4tG">Video</a>
           </p>
         </div>
       </div>
@@ -476,8 +244,8 @@
         <a
           href="https://www.eecs.mit.edu/eecs-graduate-womens-annual-research-summit-increases-research-visibility-and-strengthens-community/"
           class="headline"
-          >EECS Graduate Women’s Annual Research Summit Increases Research
-          Visibility and Strengthens Community</a
+          >EECS graduate women’s annual research summit increases research
+          visibility and strengthens community</a
         >
         <p>By Rachel Yang<br />November 30, 2021</p>
       </div>
@@ -498,10 +266,10 @@
     <p>Spring 2026: Contact me via email (before Dec. 2025).</p>
     <h3>Potential UROP Project</h3>
     <p>
-      I'm our lab's "local expert on parabolic PDE, Schrö​dinger bridges,
-      and other problems in the dynamical universes." We can jointly figure out
-      a research direction in this area, but here's an example of a UROP
-      project we could work on together — it is quite open‐ended!
+      I'm our lab's "local expert on nonlinear PDE and other problems in 
+      the dynamical universe." We can jointly figure out a research 
+      direction in this area, but here's an example of a UROP project we 
+      could work on together — it is quite open‐ended!
     </p>
     <p>
       <strong>Overview.</strong> The Schrö​dinger Bridge Problem (SBP) seeks
@@ -522,6 +290,22 @@
       understanding of linear algebra, but 6.8410 can be helpful.
     </p>
   </section>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  var btn = document.getElementById('mobile-menu-btn');
+  var navList = document.querySelector('nav ul');
+  btn.addEventListener('click', function(){
+    navList.classList.toggle('open');
+  });
+  navList.querySelectorAll('a').forEach(function(link){
+    link.addEventListener('click', function(){
+      navList.classList.remove('open');
+    });
+  });
+});
+</script>
 
 </body>
 </html>

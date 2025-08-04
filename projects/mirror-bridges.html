@@ -2,72 +2,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="project.css" />
   <title>Mirror Bridges Between Probability Measures</title>
-  <style>
-    *, *::before, *::after { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0; padding: 0;
-      font-family: 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      font-weight: 300; font-size: 16px; line-height: 1.6;
-      color: #000; background: #fff;
-    }
-    a { color: #0000EE; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    img { display: block; max-width: 100%; }
-
-    .return-main {
-      position: fixed; right: 20px; bottom: 20px;
-      padding: 8px 16px; background-color: #750014; color: #fff;
-      text-decoration: none; font-weight: 300; border-radius: 999px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-      transition: background-color 0.2s ease-in-out;
-      z-index: 1000;
-    }
-    .return-main:hover { 
-        background-color: rgba(117, 0, 20, 0.8);       
-        text-decoration: none;}
-
-    .container { max-width: 900px; margin: 0 auto; padding: 20px 20px 60px; }
-    h2, h3 { font-family: 'Helvetica Neue Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
-    h2 { font-weight: 700; font-size: 28px; margin: 0 0 16px; }
-    h3 { font-weight: 700; font-size: 20px; margin: 24px 0 12px; }
-    .authors {
-      margin-bottom: 24px;
-      font-family: 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      font-size: 18px; color: #333; line-height: 1.4;
-    }
-    figure { margin: 24px 0; }
-    figcaption { margin-top: 8px; font-size: 14px; color: #555; font-style: italic; }
-    ul { margin: 0 0 24px 20px; }
-
-    .code-container { position: relative; margin-bottom: 24px; font-size: 12px;}
-    pre {
-      background: #f7f7f7; padding: 12px; border-radius: 6px;
-      white-space: pre-wrap; word-wrap: break-word;
-      overflow-x: auto; margin: 0;
-    }
-    .copy-btn {
-      position: absolute; bottom: 8px; right: 8px;
-      background-color: #eee; color: rgba(139, 149, 158, 0.8);
-      border: none; padding: 4px 12px;
-      border-radius: 999px;
-      font-family: 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      font-size: 14px; font-weight: 500;
-      cursor: pointer;
-      transition: background-color 0.2s ease-in-out;
-    }
-  </style>
+  
 </head>
 <body>
-  <a href="../index.html" class="return-main">RETURN TO MAIN</a>
 
   <section id="project" class="container">
     <h2>
       Mirror Bridges Between Probability Measures
-      <em>Under Review</em>
+      <em><span class="conference">Under Review</span></em>
     </h2>
     <div class="authors">
       <p>
@@ -77,10 +27,12 @@
         JUSTIN SOLOMON<sup>1</sup>
       </p>
       <p>
+        <span style="font-size: small;">
         <sup>1</sup>Massachusetts Institute of Technology, USA;
         <sup>2</sup>Columbia University, USA;
         <sup>3</sup>Cambridge University, UK;
         <sup>4</sup>Xaira Therapeutics, UK
+        </span>
       </p>
     </div>
 
@@ -113,23 +65,42 @@
     </p>
 
     <h3>Downloads</h3>
-    <ul>
-      <li><a href="../papers/mirror-bridges-between-probability-measures.pdf">Preprint</a></li>
-      <li><a href="https://arxiv.org/abs/2410.07003" target="_blank" rel="noopener">arXiv</a></li>
-    </ul>
+    <p><i class="fa-regular fa-file-lines"></i> <a href="../papers/mirror-bridges-between-probability-measures.pdf">Paper</a></p>
+    <p>
+      <a
+        href="https://arxiv.org/abs/2410.07003"
+        style="display:inline-flex; align-items:center; white-space:nowrap;"
+      >
+        <img
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAbFBMVEVHcEyzICWzICWzICWzFhqzICWzICWzICWzrKWzICWzGx+zrKWzrKWzq6SzICWzrKWzHiOzrKWzICWzHiSzrKWzFRyzkYyzsaqzkIuzrKWzt6+zCBOzrKWzX12zrKWzODqzTk6zICWzrqazICWbpK3bAAAAJHRSTlMAFPO9Pv/foAnpBTj/6PlSHntLhaj+yf/3sBf/wf7U/8pf9ip5w8r+AAAAxklEQVR4AXXSVQKDQAxF0YcEDfXizv732An1IdzfA+MwOa6H3XyiYF9DS6M/DYjiBO9Szn4xORC5bz3yP+JERAcH0pmZI/x1IZOoWAqrq+gJN2NHbPIM3vOC+QylQLQsKmgl9/VfqNVlI3pRjYtVSdOWuehWVbBn0buOKUvDna7QtBAV0xoFM93C+yB602wiug8zq8e3kMmvWbuURGwBIvm3Vk79BBjNmOfNE3MdPDPaWz/+PLDeWrJztU7yjN1aWfJut3XFD+5yC5QmehAsAAAAAElFTkSuQmCC"
+          alt="arXiv"
+          style="  
+            display:inline-block;
+            width:1em;
+            height:1em;
+            margin-right:0.5em;
+            border-radius:50%;
+            object-fit:cover;
+          "
+        />
+        arXiv
+      </a>
+    </p>
 
     <div class="code-container">
       <h3>BibTeX</h3>
-      <button class="copy-btn" data-target="bibtex-code">COPY</button>
+      <button class="copy-btn" data-target="bibtex-code">
+        <i class="fa-regular fa-copy"></i>
+      </button>
       <pre id="bibtex-code">@misc{dasilva2025mirrorbridgesprobabilitymeasures,
-  title={Mirror Bridges Between Probability Measures}, 
-  author={Leticia Mattos Da Silva and Silvia Sellán and Francisco Vargas and Justin Solomon},
-  year={2025},
-  eprint={2410.07003},
-  archivePrefix={arXiv},
-  primaryClass={cs.LG},
-  url={https://arxiv.org/abs/2410.07003}
-}</pre>
+      title={Mirror Bridges Between Probability Measures}, 
+      author={Leticia Mattos Da Silva and Silvia Sellán and Francisco Vargas and Justin Solomon},
+      year={2025},
+      eprint={2410.07003},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2410.07003}
+      }</pre>
     </div>
 
     <h3>Acknowledgements</h3>
@@ -144,11 +115,21 @@
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       document.querySelectorAll('.copy-btn').forEach(btn => {
+        // grab the <i> inside the button
+        const icon = btn.querySelector('i');
+
         btn.addEventListener('click', () => {
-          const code = document.getElementById(btn.getAttribute('data-target')).innerText;
+          const code = document
+            .getElementById(btn.getAttribute('data-target'))
+            .innerText;
+
           navigator.clipboard.writeText(code).then(() => {
-            btn.textContent = 'COPIED!';
-            setTimeout(() => btn.textContent = 'COPY', 2000);
+            // outline → solid
+            icon.classList.replace('fa-regular', 'fa-solid');
+            // after 2s, revert solid → outline
+            setTimeout(() => {
+              icon.classList.replace('fa-solid', 'fa-regular');
+            }, 2000);
           });
         });
       });
