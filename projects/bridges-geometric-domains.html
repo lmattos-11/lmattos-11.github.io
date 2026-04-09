@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="project.css" />
+  <title>Schrödinger Bridges on Discretized Geometric Domains</title>
+
+  
+</head>
+<body>
+
+  <section id="project" class="container">
+    <h2>
+      Schrödinger Bridges on Discretized Geometric Domains
+      <em><span class="conference">Conditionally accepted at SIGGRAPH 2026<span></em>
+    </h2>
+    <div class="authors">
+      <p>
+        LETICIA MATTOS DA SILVA<sup>1</sup>,
+        MOHAMMAD SINA NABIZADEH<sup>1</sup>,
+        JUSTIN SOLOMON<sup>1</sup>
+      </p>
+      <p>
+        <span style="font-size: small;">
+        <sup>1</sup>Massachusetts Institute of Technology, USA;
+        </span>
+      </p>
+    </div>
+    <figure>
+      <img
+        src="../figures/teaser-bridges-geometric-domains.jpg"
+        alt="teaser"
+      />
+      <figcaption>
+        Compared to convolutional Wasserstein barycenters [Solomon et al. 2015] (bottom), our discrete Schrödinger bridge (top) produces a sharper interpolation with accurate boundary conditions and faster runtime. Here, we interpolate between two shapes using the same amount of entropy.
+      </figcaption>
+    </figure>
+
+    <h3>Abstract</h3>
+    <p>
+          We introduce a spatially discrete formulation of the Schr\"odinger bridge problem on meshes and grids that enables structure-preserving and scalable interpolation between probability distributions. Our approach builds on the duality between entropy-regularized optimal transport and the log-heat equation, deriving a discrete theory that is compatible with mesh-based finite element discretizations. The resulting Sinkhorn algorithm alternates application of the heat kernel with multiplicative updates to enforce marginal constraints. Compared to interpolation via Wasserstein barycenters, our formulation produces sharper interpolants for a given level of regularization and enforces exact endpoint marginals, in addition to enjoying faster computation. It also scales to high-resolution meshes and finer temporal discretizations, avoiding the prohibitive cost of directly discretizing dynamical transport. We demonstrate our approach across mesh- and grid-based applications, including displacement interpolation, shape interpolation, and color histogram manipulation, highlighting its ability to achieve geometric fidelity with computational efficiency.
+    </p>
+
+    <h3>Links</h3>
+    <p><i class="fa-regular fa-file-lines"></i> <span style="color: #777;">Paper is coming soon!</span></p>
+
+    <h3>Acknowledgements</h3>
+    <p>
+      The MIT Geometric Data Processing Group acknowledges the generous support of Army Research Office grant W911NF2110293, of National Science Foundation grants IIS2335492 and OAC2403239, from the CSAIL Future of Data and FinTechAI programs, from the MIT–IBM Watson AI Laboratory, from the Wistron Corporation, from the MIT Generative AI Impact Consortium, from the Toyota–CSAIL Joint Research Center, and from Schmidt Sciences.
+    </p>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.copy-btn').forEach(btn => {
+        // grab the <i> inside the button
+        const icon = btn.querySelector('i');
+
+        btn.addEventListener('click', () => {
+          const code = document
+            .getElementById(btn.getAttribute('data-target'))
+            .innerText;
+
+          navigator.clipboard.writeText(code).then(() => {
+            // outline → solid
+            icon.classList.replace('fa-regular', 'fa-solid');
+            // after 2s, revert solid → outline
+            setTimeout(() => {
+              icon.classList.replace('fa-solid', 'fa-regular');
+            }, 2000);
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>
